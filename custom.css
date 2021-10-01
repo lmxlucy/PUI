@@ -73,8 +73,9 @@ footer li {
 footer {
     text-align: center;
     background-color: #515151;
+    position: absolute;
     left: 0;
     bottom: 0;
-    position: absolute;
     width: 100%;
+    overflow: hidden;
 }
