@@ -2,16 +2,14 @@ body {
     font-family: Roboto;
 }
 
-#logo {
-    margin: 0px;
-    padding-top: 5px;
-    font-style: italic;
-    font-size: 30px;
-    float: left;
+nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
 }
 
 nav ul {
-    position: fixed;
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -31,27 +29,35 @@ nav li a:hover {
     color: rgb(209, 209, 209);
 }
 
-.nav-icon li {
+nav img {
+    width: 30px;
+}
+
+#logo {
+    padding-top: 3px;
+    padding-bottom: 3px;
+    font-style: italic;
+    font-size: 30px;
+    float: left;
+}
+
+#nav-icon li {
     float: right;
 }
 
-.nav-icon {
+#nav-icon {
     margin-top: 20px;
     margin-right: 10px;
 }
 
-.nav-items li {
+#nav-items li {
     display: inline;
     padding: 30px;
 }
 
-.nav-items {
+#nav-items {
     margin: auto;
     width: 600px;
-}
-
-nav img {
-    width: 30px;
 }
 
 footer img {
@@ -59,15 +65,16 @@ footer img {
     height: 42px;
 }
 
-footer ul li {
+footer li {
     display: inline;
-    padding: 10px;
+    padding: 1%;
 }
 
 footer {
-    padding: 10px;
     text-align: center;
     background-color: #515151;
-    right: 0px;
-    left: 0px;
+    left: 0;
+    bottom: 0;
+    position: absolute;
+    width: 100%;
 }
