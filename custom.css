@@ -1,0 +1,73 @@
+body {
+    font-family: Roboto;
+}
+
+#logo {
+    margin: 0px;
+    padding-top: 5px;
+    font-style: italic;
+    font-size: 30px;
+    float: left;
+}
+
+nav ul {
+    position: fixed;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #515151;
+}
+
+nav li a {
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 24px;
+    padding: 10px;
+}
+
+nav li a:hover {
+    color: rgb(209, 209, 209);
+}
+
+.nav-icon li {
+    float: right;
+}
+
+.nav-icon {
+    margin-top: 20px;
+    margin-right: 10px;
+}
+
+.nav-items li {
+    display: inline;
+    padding: 30px;
+}
+
+.nav-items {
+    margin: auto;
+    width: 600px;
+}
+
+nav img {
+    width: 30px;
+}
+
+footer img {
+    width: 42px;
+    height: 42px;
+}
+
+footer ul li {
+    display: inline;
+    padding: 10px;
+}
+
+footer {
+    padding: 10px;
+    text-align: center;
+    background-color: #515151;
+    right: 0px;
+    left: 0px;
+}
