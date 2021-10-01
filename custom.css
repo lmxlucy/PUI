@@ -1,4 +1,5 @@
-body {
+html body {
+    margin: 0;
     font-family: Roboto;
 }
 
@@ -60,6 +61,15 @@ nav img {
     width: 600px;
 }
 
+.banner {
+    padding: 60px;
+    text-align: center;
+    background-image: url("image/banner.png");
+    color: white;
+    font-size: 30px;
+    width: 100%;
+}
+
 footer img {
     width: 42px;
     height: 42px;
@@ -73,8 +83,6 @@ footer li {
 footer {
     text-align: center;
     background-color: #515151;
-    position: absolute;
-    left: 0;
     bottom: 0;
     width: 100%;
     overflow: hidden;
