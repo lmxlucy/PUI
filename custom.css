@@ -3,6 +3,32 @@ html body {
     font-family: Roboto;
 }
 
+h1 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+h2 {
+    margin-bottom: 5px;
+    margin-top: 0px;
+}
+
+p {
+    font-size: 30px;
+}
+
+.content-width {
+    width: 60%;
+    margin: auto;
+}
+
+.gray-background {
+    background-color: #E5E5E5;
+    overflow: hidden;
+    padding: 20px;
+}
+
 nav {
     position: fixed;
     top: 0;
@@ -61,13 +87,83 @@ nav img {
     width: 600px;
 }
 
-.banner {
-    padding: 60px;
+#banner {
+    margin-top: 50px;
+    padding-top: 60px;
+    padding-bottom: 60px;
     text-align: center;
     background-image: url("image/banner.png");
     color: white;
-    font-size: 30px;
     width: 100%;
+}
+
+#about img {
+    float: right;
+    width: 40%;
+    height: auto;
+    padding-left: 50px;
+    padding-bottom: 50px;
+}
+
+#menu {
+    padding: 20px;
+}
+
+#menu img {
+    width: 60%;
+}
+
+.column {
+    float: left;
+    width: 33.33%;
+    text-align: center;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+#product-info {
+    float: left;
+    width: 35%;
+}
+
+#product-info p {
+    font-size: 18px;
+    margin-top: 0px;
+}
+
+#product-info img {
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+#product-order {
+    float: right;
+    width: 55%;
+}
+
+#product-order select {
+    padding: 20px;
+    font-size: 24px;
+    width: 100%;
+}
+
+.action-btn {
+    width: 47%;
+    padding: 10px;
+    border: none;
+    border-radius: 80px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 5px 5px #d1d1d1;
+}
+
+#product-order input {
+    margin-right: 5%;
 }
 
 footer img {

@@ -33,10 +33,106 @@
     </nav>
 
     <!-- Banner -->
-    <div class="banner">
+    <div id="banner">
         <h1>Bun Bun Bake Shop</h1>
         <p>Best Cinnamon Rolls in Pittsburgh</p>
     </div>
+
+    <!-- About -->
+    <div id="about" class="gray-background">
+        <div class="content-width">
+            <h1>About</h1>
+            <img src="image/team.png" alt="team">
+            <p>We are a small bakery that specializes in cinnamon rolls, from our famous original cinnamon rolls to a variety of artisan flavors.
+                <br><br>Our shop is located in Pittsburgh, PA and we ship fresh rolls anywhere in the Pittsburgh area. Visitors to our site should be able to buy cinnamon rolls by different flavors. </p>
+        </div>
+    </div>
+
+    <!-- Menu -->
+    <div id="menu">
+        <div class="content-width">
+            <h1>Menu</h1>
+            <div class="row">
+                <div class="column"><img src="image/product.png" alt="product"></div>
+                <div class="column"><img src="image/product.png" alt="product"></div>
+                <div class="column"><img src="image/product.png" alt="product"></div>
+            </div>
+            <div class="row">
+                <div class="column">
+                    <h2>Original</h2>
+                </div>
+                <div class="column">
+                    <h2>Blackberry</h2>
+                </div>
+                <div class="column">
+                    <h2>Walnut</h2>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="column"><img src="image/product.png" alt="product"></div>
+                <div class="column"><img src="image/product.png" alt="product"></div>
+                <div class="column"><img src="image/product.png" alt="product"></div>
+            </div>
+            <div class="row">
+                <div class="column">
+                    <h2>Original (Gluten-Free)</h2>
+                </div>
+                <div class="column">
+                    <h2>Pumpkin Spice</h2>
+                </div>
+                <div class="column">
+                    <h2>Caramel Pecan</h2>
+                </div>
+            </div>
+            <br>
+        </div>
+    </div>
+
+    <!-- Order -->
+    <div id="order" class="gray-background">
+        <div class="content-width">
+            <h1>Order</h1>
+            <div id="product-info">
+                <img src="image/product.png" alt="product">
+                <h2>Original Cinnamon Roll</h2>
+                <p>Ingredients: Quisque rutrum sem at diam luctus, non venenatis lacus dapibus. Phasellus tortor arcu, posuere placerat condimentum at, sollicitudin quis orci.</p>
+            </div>
+            <form name="product-order" id="product-order" action="">
+                <h2>Flavor</h2>
+                <select name="flavor" id="flavor">
+                    <option value="original" selected="selected">Original</option>
+                    <option value="original(gluten-free)">Original (Gluten-Free)</option>
+                    <option value="blackberry">Blackberry</option>
+                    <option value="walnut">Walnut</option>
+                    <option value="pumpkin_spice">Pumpkin Spice</option>
+                    <option value="caramel_pecan">Caramel Pecan</option>
+                </select>
+                <br><br>
+                <h2>Glazing</h2>
+                <select name="glazing" id="glazing">
+                    <option value="none" selected="selected">None</option>
+                    <option value="sugar-milk">Sugar-milk</option>
+                    <option value="vanilla-milk">Vanilla-milk</option>
+                    <option value="double-chocolate">Double-chocolate</option>
+                </select>
+                <br><br>
+                <h2>Quantity</h2>
+                <select name="quantity" id="quantity">
+                    <option value=1 selected="selected">1</option>
+                    <option value=3>3</option>
+                    <option value=6>6</option>
+                    <option value=12>12</option>
+                </select>
+                <br><br>
+                <h2>Total Price: $5.00</h2>
+                <br>
+                <input class="action-btn" type="submit" value="Add To Cart">
+                <button class="action-btn">Buy Now</button>
+            </form>
+        </div>
+    </div>
+
     <!-- Footer -->
     <footer>
         <ul>
