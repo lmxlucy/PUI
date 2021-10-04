@@ -10,9 +10,9 @@ h1 {
     font-size: 40px;
 }
 
-h2 {
-    margin-bottom: 5px;
-    margin-top: 0px;
+h2,
+h3 {
+    display: inline;
 }
 
 p {

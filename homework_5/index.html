@@ -85,7 +85,7 @@
                     <h2>Caramel Pecan</h2>
                 </div>
             </div>
-            <br>
+            <br><br>
         </div>
     </div>
 
@@ -95,26 +95,30 @@
             <h1>Order</h1>
             <div id="product-info">
                 <img src="image/product.png" alt="product">
-                <h2>Original Cinnamon Roll</h2>
-                <p>Ingredients: Quisque rutrum sem at diam luctus, non venenatis lacus dapibus. Phasellus tortor arcu, posuere placerat condimentum at, sollicitudin quis orci.</p>
+                <h2 id="flavor_chosen">Original</h2>
+                <h2> Cinnamon Roll</h2><br>
+                <h3>wtih</h3>
+                <h3 id="glazing_chosen"> no</h3>
+                <h3> glazing</h3><br><br>
+                <p>Ingredients: Quisque rutrum sem at diam luctus, non venenatis lacus dapibus. Phasellus tortor arcu, posuere placerat at, quis orci.</p>
             </div>
             <form name="product-order" id="product-order" action="">
                 <h2>Flavor</h2>
                 <div class="select-wrapper">
-                    <select name="flavor" id="flavor">
-                        <option value="original" selected="selected">Original</option>
-                        <option value="original(gluten-free)">Original (Gluten-Free)</option>
-                        <option value="blackberry">Blackberry</option>
-                        <option value="walnut">Walnut</option>
-                        <option value="pumpkin_spice">Pumpkin Spice</option>
-                        <option value="caramel_pecan">Caramel Pecan</option>
+                    <select name="flavor" id="flavor" onchange="showFlavorChange()">
+                        <option selected="selected">Original</option>
+                        <option>Original (Gluten-Free)</option>
+                        <option>Blackberry</option>
+                        <option>Walnut</option>
+                        <option>Pumpkin Spice</option>
+                        <option>Caramel Pecan</option>
                     </select>
                 </div>
                 <br><br>
                 <h2>Glazing</h2>
                 <div class="select-wrapper">
-                    <select name="glazing" id="glazing">
-                        <option value="none" selected="selected">None</option>
+                    <select name="glazing" id="glazing" onchange="showGlazingChange()">
+                        <option value="no" selected="selected">None</option>
                         <option value="sugar-milk">Sugar-milk</option>
                         <option value="vanilla-milk">Vanilla-milk</option>
                         <option value="double-chocolate">Double-chocolate</option>
@@ -124,20 +128,31 @@
                 <h2>Quantity</h2>
                 <div class="select-wrapper">
                     <select name="quantity" id="quantity">
-                        <option value=1 selected="selected">1</option>
-                        <option value=3>3</option>
-                        <option value=6>6</option>
-                        <option value=12>12</option>
+                        <option selected="selected">1</option>
+                        <option>3</option>
+                        <option>6</option>
+                        <option>12</option>
                     </select>
                 </div>
                 <br><br>
                 <h2>Total Price: $5.00</h2>
-                <br>
+                <br><br>
                 <input class="action-btn yellow" type="submit" value="Add To Cart">
                 <button class="action-btn orange">Buy Now</button>
             </form>
         </div>
     </div>
+    <script>
+        function showFlavorChange() {
+            var selected_flavor = document.getElementById("flavor").value;
+            document.getElementById("flavor_chosen").innerText = selected_flavor;
+        }
+
+        function showGlazingChange() {
+            var selected_glazing = document.getElementById("glazing").value;
+            document.getElementById("glazing_chosen").innerText = selected_glazing;
+        }
+    </script>
 
     <!-- Footer -->
     <footer>
