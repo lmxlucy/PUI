@@ -1,6 +1,7 @@
 html body {
     margin: 0;
     font-family: Roboto;
+    color: #515151;
 }
 
 h1 {
@@ -23,8 +24,8 @@ p {
     margin: auto;
 }
 
-.gray-background {
-    background-color: #E5E5E5;
+.yellow-background {
+    background-color: #ffefc1;
     overflow: hidden;
     padding: 20px;
 }
@@ -162,8 +163,37 @@ nav img {
     box-shadow: 5px 5px #d1d1d1;
 }
 
+.yellow {
+    background-color: #FFE144;
+}
+
+.orange {
+    background-color: #FFC107
+}
+
 #product-order input {
     margin-right: 5%;
+}
+
+select {
+    border-radius: 10px;
+    -webkit-appearance: none;
+    appearance: none;
+    border-color: #00000030;
+    background-color: #FFFDF5;
+}
+
+.select-wrapper {
+    position: relative;
+}
+
+.select-wrapper::after {
+    content: "▼";
+    color: #00000030;
+    font-size: 30px;
+    top: 20px;
+    right: 15px;
+    position: absolute;
 }
 
 footer img {
