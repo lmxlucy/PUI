@@ -1,17 +1,5 @@
-body {
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .cart-container {
-    width: 50%;
-    border-radius: 20px;
-    box-shadow: 10px 10px 25px 15px #49494933;
-    padding: 20px;
+    padding: 50px;
 }
 
 .cart-header {
@@ -63,23 +51,4 @@ body {
     width: 300px;
     margin-right: 15px;
     font-size: 24px;
-}
-
-#overlay {
-    position: relative;
-    top: 25%;
-    /* 25% from the top */
-    width: 100%;
-    /* 100% width */
-    text-align: center;
-    /* Centered text/links */
-    margin-top: 30px;
-    /* 30px top margin to avoid conflict with the close button on smaller screens */
-}
-
-#overlay .closebtn {
-    position: absolute;
-    top: 20px;
-    right: 45px;
-    font-size: 60px;
 }
