@@ -18,7 +18,8 @@
             </li>
             <div id="nav-icon">
                 <li>
-                    <a href="cart.html" target="popup" onclick="window.open('cart.html', 'popup', 'width=2000'); return false;"><img src="image/cart.png" alt="cart"></a>
+                    <a href="cart.html" target="popup" onclick="window.open('cart.html', 'popup', 'width=2000, height=1000'); return false;"><img src="image/cart.png" alt="cart"></a>
+                    <h3 id="cart-logo-number">0</h3>
                 </li>
                 <li>
                     <a href=""><img src="image/profile.png" alt="profile"></a>
@@ -103,7 +104,7 @@
                 <h3> glazing</h3><br><br>
                 <p>Ingredients: Quisque rutrum sem at diam luctus, non venenatis lacus dapibus. Phasellus tortor arcu, posuere placerat at, quis orci.</p>
             </div>
-            <form name="product-order" id="product-order" action="">
+            <div id="product-order">
                 <h2>Flavor</h2>
                 <div class="select-wrapper">
                     <select name="flavor" id="flavor" onchange="showFlavorChange()">
@@ -128,7 +129,7 @@
                 <br><br>
                 <h2>Quantity</h2>
                 <div class="select-wrapper">
-                    <select name="quantity" id="quantity">
+                    <select name="quantity" id="quantity" onchange="showQuantityChange()">
                         <option selected="selected">1</option>
                         <option>3</option>
                         <option>6</option>
@@ -136,11 +137,14 @@
                     </select>
                 </div>
                 <br><br>
-                <h2>Total Price: $5.00</h2>
+                <h2>Total Price: $</h2>
+                <h2 id="total-price">5.00</h2>
                 <br><br>
-                <input class="action-btn yellow" type="submit" value="Add To Cart">
-                <button class="action-btn orange">Buy Now</button>
-            </form>
+                <button class="action-btn yellow" id="add-to-cart" onclick="addToCart()">Add to Cart</button>
+                <button class="action-btn orange" id="buy-now">Buy Now</button>
+                <br><br>
+                <h3 id="message"></h3>
+            </div>
         </div>
     </div>
 
