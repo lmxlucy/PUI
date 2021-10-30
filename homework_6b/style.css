@@ -1,0 +1,320 @@
+html body {
+    margin: 0;
+    font-family: Roboto;
+    color: #515151;
+}
+
+h1 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+h2,
+h3 {
+    display: inline;
+}
+
+p {
+    font-size: 30px;
+}
+
+.content-width {
+    width: 60%;
+    margin: auto;
+}
+
+.yellow-background {
+    background-color: #ffefc1;
+    overflow: hidden;
+    padding: 20px;
+}
+
+#cart-logo-number {
+    color: white;
+    position: absolute;
+    top: -10px;
+    right: 16px;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #515151;
+}
+
+nav li a {
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 24px;
+    padding: 10px;
+}
+
+nav li a:hover {
+    color: rgb(209, 209, 209);
+}
+
+nav img {
+    width: 30px;
+}
+
+#logo {
+    padding-top: 3px;
+    padding-bottom: 3px;
+    font-style: italic;
+    font-size: 30px;
+    float: left;
+}
+
+#nav-icon li {
+    float: right;
+}
+
+#nav-icon {
+    margin-top: 20px;
+    margin-right: 10px;
+}
+
+#nav-items li {
+    display: inline;
+    padding: 30px;
+}
+
+#nav-items {
+    margin: auto;
+    width: 600px;
+}
+
+#banner {
+    margin-top: 50px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    text-align: center;
+    background-image: url("image/banner.png");
+    color: white;
+    width: 100%;
+}
+
+#about img {
+    float: right;
+    width: 40%;
+    height: auto;
+    padding-left: 50px;
+    padding-bottom: 50px;
+}
+
+#menu {
+    padding: 20px;
+}
+
+#menu img {
+    width: 60%;
+}
+
+.column {
+    float: left;
+    width: 33.33%;
+    text-align: center;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+#product-info {
+    float: left;
+    width: 35%;
+}
+
+#product-info p {
+    font-size: 18px;
+    margin-top: 0px;
+}
+
+#product-info img {
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+#product-order {
+    float: right;
+    width: 55%;
+}
+
+.action-btn {
+    width: 47%;
+    padding: 10px;
+    border: none;
+    border-radius: 80px;
+    font-size: 28px;
+    font-weight: bold;
+    font-family: Roboto;
+    cursor: pointer;
+    box-shadow: 5px 5px #d1d1d1;
+}
+
+.yellow {
+    background-color: #FFE144;
+}
+
+.orange {
+    background-color: #FFC107
+}
+
+#product-order input {
+    margin-right: 5%;
+}
+
+select {
+    padding: 20px;
+    font-size: 24px;
+    font-family: Roboto;
+    width: 100%;
+    border-radius: 10px;
+    -webkit-appearance: none;
+    appearance: none;
+    border-color: #00000030;
+    background-color: #FFFDF5;
+}
+
+.select-wrapper {
+    position: relative;
+}
+
+.select-wrapper::after {
+    content: "▼";
+    color: #00000030;
+    font-size: 30px;
+    top: 20px;
+    right: 15px;
+    position: absolute;
+}
+
+#message {
+    color: red;
+    font-weight: lighter;
+}
+
+#overlay {
+    position: fixed;
+    /* Sit on top of the page content */
+    display: none;
+    /* Hidden by default */
+    width: 100%;
+    /* Full width (cover the whole page) */
+    height: 100%;
+    /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Black background with opacity */
+    z-index: 2;
+    /* Specify a stack order in case you're using a different order for other elements */
+    cursor: pointer;
+    /* Add a pointer on hover */
+}
+
+.cart-container {
+    padding: 50px;
+    background-color: white;
+    top: 25%;
+    left: 25%;
+    width: 50%;
+    position: fixed;
+}
+
+.cart-container a {
+    font-size: 30px;
+    float: right;
+}
+
+.cart-header {
+    border-bottom: 1px solid #00000030;
+    padding-bottom: 20px;
+}
+
+.cart-column {
+    padding: 15px;
+}
+
+.cart-row {
+    display: flex;
+}
+
+.cart-image img {
+    width: 200px;
+}
+
+.cart-options {
+    max-width: fit-content;
+}
+
+.cart-options select {
+    width: 350px;
+}
+
+.cart-price {
+    text-align: end;
+    width: 100%;
+}
+
+.cart-row {
+    border-bottom: 1px solid #00000030;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.cart-total {
+    text-align: end;
+    margin-top: 20px;
+    margin-right: 15px;
+    font-size: 24px;
+    font-family: Roboto;
+}
+
+.btn-purchase {
+    float: right;
+    width: 300px;
+    margin-right: 15px;
+    font-size: 24px;
+}
+
+footer img {
+    width: 42px;
+    height: 42px;
+}
+
+footer li {
+    display: inline;
+    padding: 1%;
+}
+
+footer {
+    text-align: center;
+    background-color: #515151;
+    bottom: 0;
+    width: 100%;
+    overflow: hidden;
+}
+
+.hyperlink {
+    text-decoration: underline;
+    color: #FFB800;
+    border: none;
+    font-size: 24px;
+    font-family: Roboto;
+}

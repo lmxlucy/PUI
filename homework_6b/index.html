@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="style.css" rel="stylesheet">
+    <script src="custom.js"></script>
+</head>
+
+<body>
+
+    <!-- Nav Bar -->
+    <nav>
+        <ul>
+            <li>
+                <a href="" id="logo">
+                    BUN<br>BUN
+                </a>
+            </li>
+            <div id="nav-icon">
+                <li>
+                    <a onclick="openShoppingCart()"><img src="image/cart.png" alt="cart"></a>
+                    <h3 id="cart-logo-number">0</h3>
+                </li>
+                <li>
+                    <a href=""><img src="image/profile.png" alt="profile"></a>
+                </li>
+            </div>
+            <div id="nav-items">
+                <li><a href="#about">About</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#order">Order</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </div>
+        </ul>
+    </nav>
+
+    <!-- Banner -->
+    <div id="banner">
+        <h1>Bun Bun Bake Shop</h1>
+        <p>Best Cinnamon Rolls in Pittsburgh</p>
+    </div>
+
+    <!-- About -->
+    <div id="about" class="yellow-background">
+        <div class="content-width">
+            <h1>About</h1>
+            <img src="image/team.png" alt="team">
+            <p>We are a small bakery that specializes in cinnamon rolls, from our famous original cinnamon rolls to a variety of artisan flavors.
+                <br><br>Our shop is located in Pittsburgh, PA and we ship fresh rolls anywhere in the Pittsburgh area. Visitors to our site should be able to buy cinnamon rolls by different flavors. </p>
+        </div>
+    </div>
+
+    <!-- Menu -->
+    <div id="menu">
+        <div class="content-width">
+            <h1>Menu</h1>
+            <div class="row">
+                <div class="column"><img src="image/Original.png" alt="product"></div>
+                <div class="column"><img src="image/Blackberry.png" alt="product"></div>
+                <div class="column"><img src="image/Walnut.png" alt="product"></div>
+            </div>
+            <div class="row">
+                <div class="column">
+                    <h2>Original</h2>
+                </div>
+                <div class="column">
+                    <h2>Blackberry</h2>
+                </div>
+                <div class="column">
+                    <h2>Walnut</h2>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="column"><img src="image/Original (Gluten-Free).png" alt="product"></div>
+                <div class="column"><img src="image/Pumpkin Spice.png" alt="product"></div>
+                <div class="column"><img src="image/Caramel Pecan.png" alt="product"></div>
+            </div>
+            <div class="row">
+                <div class="column">
+                    <h2>Original (Gluten-Free)</h2>
+                </div>
+                <div class="column">
+                    <h2>Pumpkin Spice</h2>
+                </div>
+                <div class="column">
+                    <h2>Caramel Pecan</h2>
+                </div>
+            </div>
+            <br><br>
+        </div>
+    </div>
+
+    <!-- Order -->
+    <div id="order" class="yellow-background">
+        <div class="content-width">
+            <h1>Order</h1>
+            <div id="product-info">
+                <img id="product_image" src="image/Original.png" alt="product">
+                <h2 id="flavor_chosen">Original</h2>
+                <h2> Cinnamon Roll</h2><br>
+                <h3>wtih</h3>
+                <h3 id="glazing_chosen"> no</h3>
+                <h3> glazing</h3><br><br>
+                <p>Ingredients: Quisque rutrum sem at diam luctus, non venenatis lacus dapibus. Phasellus tortor arcu, posuere placerat at, quis orci.</p>
+            </div>
+            <div id="product-order">
+                <h2>Flavor</h2>
+                <div class="select-wrapper">
+                    <select name="flavor" id="flavor" onchange="showFlavorChange()">
+                        <option selected="selected">Original</option>
+                        <option>Original (Gluten-Free)</option>
+                        <option>Blackberry</option>
+                        <option>Walnut</option>
+                        <option>Pumpkin Spice</option>
+                        <option>Caramel Pecan</option>
+                    </select>
+                </div>
+                <br><br>
+                <h2>Glazing</h2>
+                <div class="select-wrapper">
+                    <select name="glazing" id="glazing" onchange="showGlazingChange()">
+                        <option value="no" selected="selected">None</option>
+                        <option value="sugar-milk">Sugar-milk</option>
+                        <option value="vanilla-milk">Vanilla-milk</option>
+                        <option value="double-chocolate">Double-chocolate</option>
+                    </select>
+                </div>
+                <br><br>
+                <h2>Quantity</h2>
+                <div class="select-wrapper">
+                    <select name="quantity" id="quantity" onchange="showQuantityChange()">
+                        <option selected="selected">1</option>
+                        <option>3</option>
+                        <option>6</option>
+                        <option>12</option>
+                    </select>
+                </div>
+                <br><br>
+                <h2>Total Price: $</h2>
+                <h2 id="total-price">3.49</h2>
+                <br><br>
+                <button class="action-btn yellow" id="add-to-cart" onclick="addToCart()">Add to Cart</button>
+                <button class="action-btn orange" id="buy-now">Buy Now</button>
+                <br><br>
+                <h3 id="message"></h3>
+            </div>
+        </div>
+    </div>
+
+    <div id="overlay">
+        <div class="cart-container">
+            <a onclick="closeShoppingCart()">&#10006;</a>
+            <h1 class="cart-header">Shopping Cart</h1>
+            <div class="cart-items">
+            </div>
+            <div class="cart-total">
+                <span class="cart-total-title">Subtotal: </span>
+                <strong class="cart-total-price">$0.00</strong>
+            </div><br>
+            <button class="action-btn yellow btn-purchase" type="button">Proceed to checkout</button>
+            <br><br><br><br><br>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <ul>
+            <li>
+                <a href=""><img src="image/instagram.png" alt="instagram"></a>
+            </li>
+            <li>
+                <a href=""><img src="image/facebook.png" alt="facebook"></a>
+            </li>
+            <li>
+                <a href=""><img src="image/twitter.png" alt="twitter"></a>
+            </li>
+        </ul>
+    </footer>
+
+</body>
+
+</html>
