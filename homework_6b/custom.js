@@ -1,31 +1,32 @@
 function showFlavorChange() {
-    var selected_flavor = document.getElementById("flavor").value;
+    let selected_flavor = document.getElementById("flavor").value;
     document.getElementById("flavor_chosen").innerText = selected_flavor;
     document.getElementById("product_image").src = "image/" + selected_flavor + ".png"
 }
 
 function showGlazingChange() {
-    var selected_glazing = document.getElementById("glazing").value;
+    let selected_glazing = document.getElementById("glazing").value;
     document.getElementById("glazing_chosen").innerText = selected_glazing;
 }
 
 function showQuantityChange() {
-    var selected_quantity = document.getElementById("quantity").value;
+    let selected_quantity = document.getElementById("quantity").value;
     document.getElementById("total-price").innerText = 3.49 * selected_quantity
 }
 
 function addToCart() {
     //confirmation message
-    var selected_flavor = document.getElementById("flavor").value;
-    var selected_glazing = document.getElementById("glazing").value;
-    var selected_quantity = document.getElementById("quantity").value;
+    let selected_flavor = document.getElementById("flavor").value;
+    let selected_glazing = document.getElementById("glazing").value;
+    let selected_quantity = document.getElementById("quantity").value;
     document.getElementById("message").innerText = `${selected_quantity} ${selected_flavor} cinnamon roll with ${selected_glazing} glazing is added to cart.`
 
     //add to shopping cart
-    var selected_glazing_index = document.getElementById("glazing").selectedIndex;
-    var selected_quantity_index = document.getElementById("quantity").selectedIndex;
-    var image = document.getElementById("product_image").src
-    var price = document.getElementById("total-price").innerText;
+    let selected_glazing_index = document.getElementById("glazing").selectedIndex;
+    let selected_quantity_index = document.getElementById("quantity").selectedIndex;
+    let image = document.getElementById("product_image").src
+    let price = document.getElementById("total-price").innerText;
+
     addItemToCart(selected_flavor, selected_glazing_index, selected_quantity_index, image, price)
     updateCartTotal()
 
@@ -34,21 +35,21 @@ function addToCart() {
 }
 
 function updateCartLogo() {
-    var cart_items = document.getElementsByClassName("cart-row").length
+    let cart_items = document.getElementsByClassName("cart-row").length
     document.getElementById("cart-logo-number").innerText = cart_items
 }
 
 function removeCartItem(event) {
-    var buttonClicked = event.target
+    let buttonClicked = event.target
     buttonClicked.parentElement.parentElement.remove()
     updateCartTotal()
     updateCartLogo()
 }
 
 function addItemToCart(selected_flavor, selected_glazing_index, selected_quantity_index, image, price) {
-    var cartRow = document.createElement('div')
+    let cartRow = document.createElement('div')
     cartRow.classList.add('cart-row')
-    var cartRowContents = `
+    let cartRowContents = `
         <div class="cart-image cart-column">
             <img src="${image}">
         </div>
@@ -85,26 +86,24 @@ function addItemToCart(selected_flavor, selected_glazing_index, selected_quantit
 }
 
 function updateCartTotal() {
-    var cartItemContainer = document.getElementsByClassName('cart-items')[0]
-    var cartRows = cartItemContainer.getElementsByClassName('cart-row')
-    var total = 0
-    for (var i = 0; i < cartRows.length; i++) {
-        var cartRow = cartRows[i]
-        var priceElement = cartRow.getElementsByClassName('cart-price')[0]
-        var price = parseFloat(priceElement.innerText.replace('$', ''))
-        console.log(price)
-        console.log(quantity)
+    let cartItemContainer = document.getElementsByClassName('cart-items')[0]
+    let cartRows = cartItemContainer.getElementsByClassName('cart-row')
+    let total = 0
+    for (let i = 0; i < cartRows.length; i++) {
+        let cartRow = cartRows[i]
+        let priceElement = cartRow.getElementsByClassName('cart-price')[0]
+        let price = parseFloat(priceElement.innerText.replace('$', ''))
         total = total + price
     }
-    document.getElementsByClassName('cart-total-price')[0].innerText = '$' + total
+    document.getElementsByClassName('cart-total-price')[0].innerText = '$' + total.toFixed(2)
 }
 
 function updateCartPrice(event) {
-    var input = event.target
-    var cartRow = input.parentElement.parentElement.parentElement
-    var newQuantity = cartRow.getElementsByClassName('quantity')[0].value
-    var newPrice = 3.49 * newQuantity
-    cartRow.getElementsByClassName('cart-price')[0].innerText = '$' + newPrice
+    let input = event.target
+    let cartRow = input.parentElement.parentElement.parentElement
+    let newQuantity = cartRow.getElementsByClassName('quantity')[0].value
+    let newPrice = 3.49 * newQuantity
+    cartRow.getElementsByClassName('cart-price')[0].innerText = '$' + newPrice.toFixed(2)
     updateCartTotal()
 }
 
