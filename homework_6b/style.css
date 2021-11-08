@@ -30,7 +30,7 @@ p {
     padding: 20px;
 }
 
-#cart-logo-number {
+.cart-logo-number {
     color: white;
     position: absolute;
     top: -10px;
@@ -68,7 +68,7 @@ nav img {
     width: 30px;
 }
 
-#logo {
+.logo {
     padding-top: 3px;
     padding-bottom: 3px;
     font-style: italic;
@@ -76,26 +76,26 @@ nav img {
     float: left;
 }
 
-#nav-icon li {
+.nav-icon li {
     float: right;
 }
 
-#nav-icon {
+.nav-icon {
     margin-top: 20px;
     margin-right: 10px;
 }
 
-#nav-items li {
+.nav-items li {
     display: inline;
     padding: 30px;
 }
 
-#nav-items {
+.nav-items {
     margin: auto;
     width: 600px;
 }
 
-#banner {
+.banner {
     margin-top: 50px;
     padding-top: 60px;
     padding-bottom: 60px;
@@ -207,34 +207,10 @@ select {
     font-weight: lighter;
 }
 
-#overlay {
-    position: fixed;
-    /* Sit on top of the page content */
-    display: none;
-    /* Hidden by default */
-    width: 100%;
-    /* Full width (cover the whole page) */
-    height: 100%;
-    /* Full height (cover the whole page) */
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    /* Black background with opacity */
-    z-index: 2;
-    /* Specify a stack order in case you're using a different order for other elements */
-    cursor: pointer;
-    /* Add a pointer on hover */
-}
-
 .cart-container {
     padding: 50px;
-    background-color: white;
-    top: 25%;
-    left: 25%;
-    width: 50%;
-    position: fixed;
+    width: 60%;
+    margin: auto;
 }
 
 .cart-container a {
@@ -311,7 +287,7 @@ footer {
     overflow: hidden;
 }
 
-.hyperlink {
+.remove {
     text-decoration: underline;
     color: #FFB800;
     border: none;
