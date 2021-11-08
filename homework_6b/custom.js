@@ -43,6 +43,7 @@ function displayCart() {
             cartRow.getElementsByClassName("quantity")[0].selectedIndex = element.quantity;
             cartRow.getElementsByClassName('remove')[0].addEventListener('click', function() { removeCartItem(index); });
             cartRow.getElementsByClassName('quantity')[0].addEventListener('change', function() { updateCartItem(index); });
+            cartRow.getElementsByClassName('glazing')[0].addEventListener('change', function() { updateCartItem(index); });
             document.getElementsByClassName("cart-items")[0].appendChild(cartRow)
             overallPrice += parseFloat(element.price);
         });
@@ -50,12 +51,29 @@ function displayCart() {
     }
 }
 
+function updateCartItem(index) {
+    let cart = JSON.parse(localStorage.getItem("cart"));
+    var element = cart[index];
+    element.quantity = document.getElementsByClassName("quantity")[index].selectedIndex;
+    element.glazing = document.getElementsByClassName("glazing")[index].selectedIndex;
+    if (element.quantity == 0) {
+        element.price = 3.49;
+    } else if (element.quantity == 1) {
+        element.price = 3.49 * 3;
+    } else if (element.quantity == 2) {
+        element.price = 3.49 * 6;
+    } else {
+        element.price = 3.49 * 12;
+    }
+    cart.splice(index, 1, element);
+    localStorage.setItem("cart", JSON.stringify(cart));
+    location.reload();
+}
+
 function removeCartItem(index) {
-    console.log(index);
     let cart = JSON.parse(localStorage.getItem("cart"));
     cart.splice(index, 1);
     localStorage.setItem("cart", JSON.stringify(cart));
-    displayCartLogo();
     location.reload();
 }
 
