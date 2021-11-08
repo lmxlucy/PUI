@@ -41,8 +41,8 @@ function displayCart() {
             cartRow.innerHTML = cartRowContents;
             cartRow.getElementsByClassName("glazing")[0].selectedIndex = element.glazing;
             cartRow.getElementsByClassName("quantity")[0].selectedIndex = element.quantity;
-            // cartRow.getElementsByClassName('remove')[0].addEventListener('click', removeCartItem(index));
-            // cartRow.getElementsByClassName('quantity')[0].addEventListener('change', updateCartItem(element.key));
+            cartRow.getElementsByClassName('remove')[0].addEventListener('click', function() { removeCartItem(index); });
+            cartRow.getElementsByClassName('quantity')[0].addEventListener('change', function() { updateCartItem(index); });
             document.getElementsByClassName("cart-items")[0].appendChild(cartRow)
             overallPrice += parseFloat(element.price);
         });
@@ -55,6 +55,8 @@ function removeCartItem(index) {
     let cart = JSON.parse(localStorage.getItem("cart"));
     cart.splice(index, 1);
     localStorage.setItem("cart", JSON.stringify(cart));
+    displayCartLogo();
+    location.reload();
 }
 
 function displayCartLogo() {

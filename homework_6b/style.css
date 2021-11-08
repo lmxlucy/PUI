@@ -221,6 +221,7 @@ select {
 .cart-header {
     border-bottom: 1px solid #00000030;
     padding-bottom: 20px;
+    text-align: left;
 }
 
 .cart-column {
