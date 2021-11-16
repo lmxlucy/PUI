@@ -12,6 +12,9 @@ p {
     font-size: 22px;
 }
 
+
+/* Reference: https://codepen.io/jeffglenn/pen/KNYoKa */
+
 .section-title {
     display: flex;
     align-items: center;
@@ -130,7 +133,10 @@ p {
     filter: grayscale(100%);
 }
 
-.timeline {
+
+/* Reference: https://www.cssscript.com/gradient-timline-progressbar/ */
+
+#timeline {
     position: relative;
     width: 60%;
     margin: auto;
