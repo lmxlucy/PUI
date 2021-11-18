@@ -1,7 +1,6 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
-    line-height: 1.75;
+    line-height: 1.50;
     color: #fff;
     background-color: #6CB4B8;
     width: 100%;
@@ -9,24 +8,62 @@ body {
 }
 
 p {
-    font-size: 22px;
+    font-size: max(1.5vh, 1vw);
 }
 
-
-/* Reference: https://codepen.io/jeffglenn/pen/KNYoKa */
+h1 {
+    font-size: max(3vh, 2vw);
+}
 
 .section-title {
     display: flex;
     align-items: center;
     flex-direction: row;
     justify-content: center;
-    background-color: #6CB4B8;
     padding-top: 5vh;
+    background-color: #6CB4B8;
 }
 
 .section-title img {
     width: 80px;
 }
+
+#my-name {
+    padding: 10px;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+#my-name img {
+    height: 50px;
+    width: auto;
+}
+
+#my-name a {
+    height: 50px;
+    width: auto;
+    margin-left: 5px;
+}
+
+#my-intro {
+    width: 100%;
+    height: 100%;
+    background-color: #6CB4B8;
+}
+
+.section-description {
+    position: relative;
+    text-align: center;
+    width: 40vw;
+    margin: auto;
+    padding-top: 50px;
+}
+
+
+/* Reference: https://codepen.io/jeffglenn/pen/KNYoKa */
 
 #work {
     display: flex;
@@ -42,7 +79,7 @@ p {
     transform: translate3d(0, 0, 0);
     position: relative;
     width: 25%;
-    height: 70vh;
+    height: 80vh;
     color: #fff;
     overflow: hidden;
     transition: width 0.5s ease;
@@ -115,7 +152,7 @@ p {
     z-index: 1;
     border-top: 1px solid #fff;
     border-bottom: 1px solid #fff;
-    font-size: 22px;
+    font-size: max(2vh, 1vw);
     font-weight: bold;
     text-align: center;
 }
