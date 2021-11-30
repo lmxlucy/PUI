@@ -50,6 +50,10 @@ h1 {
     margin-left: 5px;
 }
 
+.nav-wrapper {
+    background-color: #6CB4B8;
+}
+
 #intro {
     width: 100%;
     height: 100%;
