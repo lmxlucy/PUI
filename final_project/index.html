@@ -4,12 +4,9 @@
 <head>
     <link href="style.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="animation.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
+    <script src="animation.js"></script>
 </head>
 
 <body>
@@ -29,14 +26,14 @@
 
     <div id="my-work">
         <div class="section-title">
-            <img src="images/mywork.png">
-            <h1>My Work</h1>
+            <img class="top" src="images/mywork.png">
+            <h1 class="top">My Work</h1>
         </div>
 
         <!-- Reference: https://codepen.io/jeffglenn/pen/KNYoKa -->
         <section id="work">
 
-            <div class="work-piece">
+            <div class="work-piece rotate-left">
 
                 <div class="work-bg" style="background-image: url(images/FunFact.png)"></div>
 
@@ -50,7 +47,7 @@
 
             </div>
 
-            <div class="work-piece">
+            <div class="work-piece rotate-left">
 
                 <div class="work-bg" style="background-image: url(images/Daimler.png)"></div>
 
@@ -65,7 +62,7 @@
 
             </div>
 
-            <div class="work-piece">
+            <div class="work-piece rotate-right">
 
                 <div class="work-bg" style="background-image: url(images/Magazine.png)"></div>
 
@@ -80,7 +77,7 @@
 
             </div>
 
-            <div class="work-piece">
+            <div class="work-piece rotate-right">
 
                 <div class="work-bg" style="background-image: url(images/SparkTalk.png)"></div>
 
@@ -100,8 +97,8 @@
 
     <div id="my-journey">
         <div class="section-title">
-            <img src="images/myjourney.png">
-            <h1>My Journey</h1>
+            <img class="top" src="images/myjourney.png">
+            <h1 class="top">My Journey</h1>
         </div>
 
         <!-- Reference: https://www.cssscript.com/gradient-timline-progressbar/ -->
@@ -117,7 +114,7 @@
                         <h1 class="timeline_block_title">Sep 2019</h1>
                     </div>
                     <div class="timeline_block_body">
-                        <p class="timeline_block_text">I started my undergraduate studies at Carnegie Mellon University</p>
+                        <p class="timeline_block_text">I started my undergraduate studies at Carnegie Mellon University.</p>
                     </div>
                 </div>
 
@@ -129,7 +126,7 @@
                         <h1 class="timeline_block_title">Oct 2019</h1>
                     </div>
                     <div class="timeline_block_body">
-                        <p class="timeline_block_text">My team won the first place in CMU Puzzle Hunt, where we solved carefully designed puzzles written in python </p>
+                        <p class="timeline_block_text">My team won the first place in CMU Puzzle Hunt, where we solved carefully designed puzzles written in python.</p>
                         <div class="timeline_block_card">
                             <img src="images/112PuzzleHunt.jpg">
                         </div>
@@ -174,9 +171,9 @@
                         <h1 class="timeline_block_title">Feb 2020</h1>
                     </div>
                     <div class="timeline_block_body">
-                        <p class="timeline_block_text">My team built a website that gathered free food opportunities across campus in a 24-hour Hackathon</p>
+                        <p class="timeline_block_text">My team built a website that gathered free food opportunities across campus in a 24-hour Hackathon.</p>
                         <div class="timeline_block_card">
-                            <a href="https://github.com/Vpollo/Sneaky" target="_blank"><img src="images/.png"></a>
+                            <a href="https://github.com/Vpollo/Sneaky" target="_blank"><img src="images/Sneaky.jpg"></a>
                         </div>
                     </div>
                 </div>
@@ -218,22 +215,19 @@
                     </div>
                     <div class="timeline_block_body">
                         <p class="timeline_block_text">I interned as a Creative Content Producer at <a class="italic" href="https://www.smartfutures.org/">Smart Futures</a>, where I planned, designed, and created educational videos on business plan and career paths for middle and high
-                            schoolers using PowToon
+                            schoolers using PowToon.
                         </p>
                         <div class="timeline_block_card">
                             <a href="https://www.powtoon.com/online-presentation/gbxpM8JSCWS/business-plan/" target="_blank"><img src="images/BusinessPlanVideo.png"></a>
                         </div>
                     </div>
                 </div>
-
-
-                <div class="timeline_hider"></div>
             </div>
+            <div class="timeline_hider"></div>
         </section>
-
-
     </div>
 
+    <script src="animation.js"></script>
 </body>
 
 </html>
