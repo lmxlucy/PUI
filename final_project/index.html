@@ -5,11 +5,12 @@
     <link href="style.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="animation.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js"></script>
 </head>
 
 <body>
+    <!-- navbar -->
     <div class="navbar-fixed">
         <nav class="z-depth-0">
             <div class="nav-wrapper">
@@ -27,30 +28,32 @@
         </nav>
     </div>
 
-
+    <!-- intro -->
     <div id="my-intro">
-        <section id="intro">
-            <!-- <div class="section-title" id="my-name">
-                <img src="images/myname.png">
-                <a href="resume.pdf" target="_blank"><img src="images/signature.png" alt="Meixuan Li"></a>
-            </div> -->
-
-            <div class="section-description">
-                <p>I am a college student at CMU doing software development, user research, and design. To be honest, I am still trying to figure out what I want to do career-wise. </p>
+        <section class="hero-wrapper" id="intro">
+            <div class="hero">
+                <img src="images/intro.jpg" alt="intro">
+                <div class="heading">
+                    <h1>Meixuan (Lucy) Li</h1>
+                    <h4>Software Developer | User Researcher | Designer</h4>
+                </div>
             </div>
+            <span id="scroll-arrow"></span>
         </section>
+
     </div>
 
+    <!-- work -->
     <div id="my-work">
         <div class="section-title">
-            <img class="top" src="images/mywork.png">
+            <img class="top" src="images/mywork.png" alt="work">
             <h1 class="top">My Work</h1>
         </div>
 
         <!-- Reference: https://codepen.io/jeffglenn/pen/KNYoKa -->
         <section id="work">
 
-            <div class="work-piece rotate-left">
+            <div class="work-piece from_right">
 
                 <div class="work-bg" style="background-image: url(images/FunFact.png)"></div>
 
@@ -64,7 +67,7 @@
 
             </div>
 
-            <div class="work-piece rotate-left">
+            <div class="work-piece from_left">
 
                 <div class="work-bg" style="background-image: url(images/Daimler.png)"></div>
 
@@ -79,7 +82,7 @@
 
             </div>
 
-            <div class="work-piece rotate-right">
+            <div class="work-piece from_right">
 
                 <div class="work-bg" style="background-image: url(images/Magazine.png)"></div>
 
@@ -94,7 +97,7 @@
 
             </div>
 
-            <div class="work-piece rotate-right">
+            <div class="work-piece from_left">
 
                 <div class="work-bg" style="background-image: url(images/SparkTalk.png)"></div>
 
@@ -112,9 +115,10 @@
         </section>
     </div>
 
+    <!-- journey -->
     <div id="my-journey">
         <div class="section-title">
-            <img class="top" src="images/myjourney.png">
+            <img class="top" src="images/myjourney.png" alt="journey">
             <h1 class="top">My Journey</h1>
         </div>
 
@@ -145,7 +149,7 @@
                     <div class="timeline_block_body">
                         <p class="timeline_block_text">My team won the first place in CMU Puzzle Hunt, where we solved carefully designed puzzles written in python.</p>
                         <div class="timeline_block_card">
-                            <img src="images/112PuzzleHunt.jpg">
+                            <img src="images/112PuzzleHunt.jpg" alt="puzzle hunt prize">
                         </div>
                     </div>
                 </div>
@@ -160,7 +164,7 @@
                     <div class="timeline_block_body">
                         <p class="timeline_block_text">My team made a voice-controlled Flappy Bird with Python in a 24-hour Hackathon.</p>
                         <div class="timeline_block_card">
-                            <a href="https://www.youtube.com/watch?v=YoENPJqIJ6k" target="_blank"><img src="images/Hack112.png"></a>
+                            <a href="https://www.youtube.com/watch?v=YoENPJqIJ6k" target="_blank"><img src="images/Hack112.png" alt="hack112"></a>
                         </div>
                     </div>
                 </div>
@@ -175,7 +179,7 @@
                     <div class="timeline_block_body">
                         <p class="timeline_block_text">I built an obstacle game with PyAudio that was designed based on an input music and controlled with keyboard, mouse, and player’s real-time voice.</p>
                         <div class="timeline_block_card">
-                            <a href="https://www.youtube.com/watch?v=11uo3LuKvPw" target="_blank"><img src="images/112TP.png"></a>
+                            <a href="https://www.youtube.com/watch?v=11uo3LuKvPw" target="_blank"><img src="images/112TP.png" alt="112 term project"></a>
                         </div>
                     </div>
                 </div>
@@ -190,7 +194,7 @@
                     <div class="timeline_block_body">
                         <p class="timeline_block_text">My team built a website that gathered free food opportunities across campus in a 24-hour Hackathon.</p>
                         <div class="timeline_block_card">
-                            <a href="https://github.com/Vpollo/Sneaky" target="_blank"><img src="images/Sneaky.jpg"></a>
+                            <a href="https://github.com/Vpollo/Sneaky" target="_blank"><img src="images/Sneaky.jpg" alt="sneaky website"></a>
                         </div>
                     </div>
                 </div>
@@ -218,7 +222,7 @@
                         <p class="timeline_block_text">Frustrated by the pandamic, I started brainstorming ways to help end this madness.
                         </p>
                         <div class="timeline_block_card">
-                            <a href="https://drive.google.com/file/d/1wSuqnM2oaf9OWjjCsyal0ZfNSlgcH9JI/view?usp=sharing" target="_blank"><img src="images/COVID.png"></a>
+                            <a href="https://drive.google.com/file/d/1wSuqnM2oaf9OWjjCsyal0ZfNSlgcH9JI/view?usp=sharing" target="_blank"><img src="images/COVID.png" alt="covid-19 poster"></a>
                         </div>
                     </div>
                 </div>
@@ -235,7 +239,7 @@
                             schoolers using PowToon.
                         </p>
                         <div class="timeline_block_card">
-                            <a href="https://www.powtoon.com/online-presentation/gbxpM8JSCWS/business-plan/" target="_blank"><img src="images/BusinessPlanVideo.png"></a>
+                            <a href="https://www.powtoon.com/online-presentation/gbxpM8JSCWS/business-plan/" target="_blank"><img src="images/BusinessPlanVideo.png" alt="business plan video"></a>
                         </div>
                     </div>
                 </div>
