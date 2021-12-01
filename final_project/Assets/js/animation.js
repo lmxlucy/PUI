@@ -15,13 +15,6 @@ ScrollReveal({
 });
 ScrollReveal().reveal('#scroll-arrow', { reset: false, delay: 1400, distance: '150px', origin: 'bottom' });
 ScrollReveal().reveal('.top', { origin: 'top' });
-ScrollReveal().reveal('.right', {
-    reset: false,
-    delay: 1000,
-    duration: 1000,
-    distance: '100%',
-    origin: 'right'
-});
 ScrollReveal().reveal('.from_right', {
     delay: 100,
     duration: 2000,
